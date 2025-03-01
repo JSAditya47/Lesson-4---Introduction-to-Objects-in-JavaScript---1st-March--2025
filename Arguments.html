@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: monospace;
+        font-size: 30px;
+        text-align: center;
+        font-weight: bold;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Finding the Largest Number with the Help of Argument Objects</h3>
+    <p id="result"></p>
+
+    <script>
+      function findMax() {
+        var max = 0;
+
+        for (i = 0; i < arguments.length; i++) {
+          if (arguments[i] > max) {
+            max = arguments[i];
+          }
+        }
+        return max;
+      }
+
+      document.getElementById("result").innerHTML = findMax(
+        69,
+        420,
+        690,
+        4200,
+        840,
+        4761
+      );
+    </script>
+  </body>
+</html>
